@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <h1>Pokedex</h1>
-    <ul>
-        <% pokemons.forEach(function(pokemon) { %>
-            <li>
-                <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %>
-                </a> - <%= pokemon.tipo %>
-            </li>
-        <% }); %>
-    </ul>
+    <div class="pokemon-list">
+        <h1>Pokedex</h1>
+        <ul>
+            <% pokemons.forEach(function(pokemon) { %>
+                <li>
+                    <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %>
+                    </a> - <%= pokemon.tipo %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
 </body>
 </html>

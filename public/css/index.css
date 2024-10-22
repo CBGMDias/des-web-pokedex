@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.pokemon-list {
+    width: 40%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pokemon-list h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pokemon-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pokemon-list a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor do link padrão */
+    background-color: #f0f0f0; /* Cor de fundo do link */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.pokemon-list a:visited {
+    color: #000; /* Cor do link visitado (igual ao link normal) */
+}
+
+.pokemon-list a:hover {
+    background-color: #ccc; /* Cor de fundo no hover */
+    color: #fff; /* Cor do texto no hover */
+}
+
+.pokemon-list li:last-child {
+    border-bottom: none;
+}
