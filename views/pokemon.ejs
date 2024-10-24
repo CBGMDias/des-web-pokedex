@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pokemon.nome %></title>
+    <link rel="stylesheet" href="/css/pokemon.css">
 </head>
 <body>
-    <h1><%= pokemon.nome %></h1>
-    <p>Tipo: <%= pokemon.tipo %></p>
-    <a href="/">Voltar a Pokedex</a>
+    <div class="pokemon-details">
+        <h1><%= pokemon.nome %></h1>
+        <h4>Tipo: <%= pokemon.tipo %></h4>
+        <a href="/">Voltar à Pokedex</a>
+    </div>
 </body>
 </html>
