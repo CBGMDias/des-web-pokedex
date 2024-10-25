@@ -44,6 +44,7 @@ nav a {
          1px  1px 0 #023047;
 }
 
+
 body {
     font-family: 'Pokemon Hollow', sans-serif;
     background-color: #d0dee5;
@@ -52,48 +53,50 @@ body {
     padding: 0;
 }
 
-.pokemon-form {
+.pokemon-list {
+    text-align: center;
     width: 40%;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #e3e3e3;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e3e3e3; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.pokemon-form h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 20px;
+.pokemon-list h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.pokemon-form label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
+.pokemon-list ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.pokemon-form input {
-    width: 100%;
+.pokemon-list li {
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
 }
 
-.pokemon-form button {
-    font-family: 'Pokemon Hollow';
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.pokemon-list a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor do link padrão */
+    background-color: #f0f0f0; /* Cor de fundo do link */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
 }
 
-.pokemon-form button:hover {
-    background-color: #555;
+.pokemon-list a:visited {
+    color: #000; /* Cor do link visitado (igual ao link normal) */
+}
+
+.pokemon-list a:hover {
+    background-color: #ccc; /* Cor de fundo no hover */
+    color: #fff; /* Cor do texto no hover */
+}
+
+.pokemon-list li:last-child {
+    border-bottom: none;
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pokemon.nome %></title>
-    <link rel="stylesheet" href="/css/pokemon.css">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/css/pokedex.css">
     <link rel="shortcut icon" href="/images/pokebola-logo.png" type="image/x-icon">
 </head>
 <body>
@@ -21,11 +21,16 @@
             </nav>
         </div>
     </header>
-    
-    <div class="pokemon-details">
-        <h1><%= pokemon.nome %></h1>
-        <h4>Tipo: <%= pokemon.tipo %></h4>
-        <a href="/">Voltar à Pokedex</a>
+
+    <div class="pokemon-list">
+        <h1>Pokedex</h1>
+        <ul>
+            <% pokemons.forEach(function(pokemon) { %>
+                <li>
+                    <h4><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></a></h4>
+                </li>
+            <% }); %>
+        </ul>
     </div>
 </body>
 </html>

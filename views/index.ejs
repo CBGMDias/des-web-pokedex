@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Pokémon</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/images/pokebola-logo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="pokemon-list">
-        <h1>Pokedex</h1>
-        <ul>
-            <% pokemons.forEach(function(pokemon) { %>
-                <li>
-                    <h4><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></a></h4>
-                </li>
-            <% }); %>
-        </ul>
-    </div>
+    <header>
+        <div class="cabecalho">
+            <a href="/">
+                <img src="/images/pokemon-logo.svg" alt="Logo Pokemon" class="logo">
+            </a>
+
+            <nav>
+                <p><a href="/">Início</a></p>
+                <p><a href="/pokedex">Pokedex</a></p>
+                <p><a href="/treinadores">Treinadores</a></p>
+            </nav>
+        </div>
+    </header>
+
     <div class="pokemon-form">
         <h2>Adicionar um novo Pokémon</h2>
         <form action="/add-pokemon" method="POST">
