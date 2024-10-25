@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        
         <div class="cabecalho">
             <a href="/">
                 <img src="/images/pokemon-logo.svg" alt="Logo Pokemon" class="logo">
@@ -22,15 +23,19 @@
         </div>
     </header>
 
-    <div class="pokemon-list">
-        <h1>Pokedex</h1>
-        <ul>
-            <% pokemons.forEach(function(pokemon) { %>
-                <li>
-                    <h4><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></a></h4>
-                </li>
-            <% }); %>
-        </ul>
+    <div class="body-container">
+        <div class="imagem-pokedex"><img src="/images/pokedex.png" alt="Imagem da Pokédex" class="pokedex-image"></div>
+
+        <div class="pokemon-list">
+            <h1>Pokedex</h1>
+            <h4><a href="add-pokemon">Adicionar +</a></h4>
+
+            <div class="pokemons">
+                <% pokemons.forEach(function(pokemon) { %>
+                    <h4><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a></h4>
+                <% }); %>
+            </div>
+        </div>
     </div>
 </body>
 </html>

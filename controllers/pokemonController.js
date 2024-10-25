@@ -18,10 +18,14 @@ const getPokemon = (req, res) => {
     }
 };
 
+const getAddPokemon = (req, res) => {
+    res.render('add-pokemon')
+}
+
 const addPokemon = (req, res) => {
     const { nome, tipo } = req.body
     pokemonModel.createPokemon(nome, tipo)
-    res.redirect('/')
+    res.redirect('/pokedex')
 };
 
-module.exports={ getIndex, getAllPokemons, getPokemon, addPokemon }
+module.exports={ getIndex, getAllPokemons, getPokemon, getAddPokemon, addPokemon }

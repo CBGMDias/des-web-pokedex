@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pokemon.nome %></title>
-    <link rel="stylesheet" href="/css/pokemon.css">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="/css/add-pokemon.css">
     <link rel="shortcut icon" href="/images/pokebola-logo.png" type="image/x-icon">
 </head>
 <body>
@@ -22,10 +22,17 @@
         </div>
     </header>
 
-    <div class="pokemon-details">
-        <h1><%= pokemon.nome %></h1>
-        <h4>Tipo: <%= pokemon.tipo %></h4>
-        <a href="/pokedex">Voltar à Pokedex</a>
+    <div class="pokemon-form">
+        <h2>Adicionar um novo Pokémon</h2>
+        <form action="/add-pokemon" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" required>
+
+            <button type="submit">Adicionar Pokémon</button>
+        </form>
     </div>
 </body>
 </html>

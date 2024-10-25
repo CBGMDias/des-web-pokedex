@@ -51,3 +51,49 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.pokemon-form {
+    width: 40%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.pokemon-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.pokemon-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pokemon-form button {
+    font-family: 'Pokemon Hollow';
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pokemon-form button:hover {
+    background-color: #555;
+}
