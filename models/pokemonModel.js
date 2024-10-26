@@ -29,6 +29,7 @@ pokemons.sort((a, b) => a.nome.localeCompare(b.nome));
   const createPokemon = (nome, tipo) => {
     const novoPokemon = { id: pokemons.length + 1, nome, tipo }
     pokemons.push(novoPokemon)
+    pokemons.sort((a, b) => a.nome.localeCompare(b.nome));
   }
 
   

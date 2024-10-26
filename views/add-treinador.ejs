@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Treinador</title>
+    <link rel="stylesheet" href="/css/add-treinador.css">
+    <link rel="shortcut icon" href="/images/pokebola-logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="/">
+                <img src="/images/pokemon-logo.svg" alt="Logo Pokemon" class="logo">
+            </a>
+
+            <nav>
+                <p><a href="/">Início</a></p>
+                <p><a href="/pokedex">Pokedex</a></p>
+                <p><a href="/treinadores">Treinadores</a></p>
+            </nav>
+        </div>
+    </header>
+
+    <div class="treinador-form">
+        <h2>Adicionar um novo Treinador</h2>
+        <form action="/add-treinador" method="POST">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <div id="pokemon-select-container">
+                <label for="pokemon-0">Escolha um Pokémon:</label>
+                <select id="pokemon-0" name="pokemons[]" required>
+                    <% pokemons.forEach(function(pokemon) { %>
+                        <option value="<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></option>
+                    <% }); %>
+                </select>
+            </div>
+        
+            <div class="button-container">
+                <button type="button" onclick="adicionarPokemon()">Adicionar outro Pokémon</button>
+                <button type="submit">Criar Treinador</button>
+            </div>
+        </form>
+        
+        <script>
+            let pokemonCount = 1; // Contador para o ID da nova caixa de seleção
+        
+            function adicionarPokemon() {
+                const container = document.getElementById("pokemon-select-container");
+        
+                // Cria um novo <select> para escolher outro Pokémon
+                const novoSelect = document.createElement("select");
+                novoSelect.name = "pokemons[]"; // Nome para enviar como um array no formulário
+                novoSelect.id = "pokemon-" + pokemonCount;
+                pokemonCount++;
+        
+                // Adiciona as opções de Pokémon ao novo <select>
+                const options = `<% pokemons.forEach(function(pokemon) { %>
+                                    <option value="<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></option>
+                                 <% }); %>`;
+                novoSelect.innerHTML = options;
+        
+                // Insere o novo <select> no container
+                const label = document.createElement("label");
+                label.innerText = "Escolha outro Pokémon:";
+                container.appendChild(label);
+                container.appendChild(novoSelect);
+            }
+        </script>
+    </div>
+</body>
+</html>

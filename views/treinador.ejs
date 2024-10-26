@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Pokémon</title>
-    <link rel="stylesheet" href="/css/add-pokemon.css">
+    <title><%= treinador.nome %></title>
+    <link rel="stylesheet" href="/css/treinador.css">
     <link rel="shortcut icon" href="/images/pokebola-logo.png" type="image/x-icon">
 </head>
 <body>
@@ -22,17 +22,15 @@
         </div>
     </header>
 
-    <div class="pokemon-form">
-        <h2>Adicionar um novo Pokémon</h2>
-        <form action="/add-pokemon" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="tipo">Tipo:</label>
-            <input type="text" id="tipo" name="tipo" required>
-
-            <button type="submit">Adicionar Pokémon</button>
-        </form>
+    <div class="treinador-details">
+        <h1><%= treinador.nome %></h1>
+        <h3>Pokémons:</h3>
+        <div class="pokedex-treinador">
+            <% treinador.pokedex.forEach(function(pokemon) { %>
+                <h4><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a></h4>
+            <% }); %>
+        </div>
+        <a href="/treinadores">Voltar aos Treinadores</a>
     </div>
 </body>
 </html>

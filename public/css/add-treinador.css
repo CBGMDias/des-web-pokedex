@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Pokemon Hollow';
+    src: url('/fonts/Pokemon-hollow.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('/fonts/Pokemon-solid.ttf') format('truetype');
+}
+
+.logo{
+    height: auto;
+    width: 250px;
+}
+
+header {
+    border: 2px solid #219ebc;
+    background-color: #8ecae6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;   
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-family: 'Pokemon Solid';
+    font-size: 24px;
+    margin-left: 20px;
+    padding-right: 50px;
+    text-decoration: none;
+    color: #ffb703;
+    text-shadow: 
+        -1px -1px 0 #023047,
+         1px -1px 0 #023047,
+        -1px  1px 0 #023047,
+         1px  1px 0 #023047;
+}
+
+body {
+    font-family: 'Pokemon Hollow', sans-serif;
+    background-color: #d0dee5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.treinador-form {
+    width: 40%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.treinador-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.treinador-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.treinador-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.treinador-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'><path d='M7 10l5 5 5-5H7z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.treinador-form .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.treinador-form button {
+    font-family: 'Pokemon Hollow';
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.treinador-form button:hover {
+    background-color: #555;
+}
