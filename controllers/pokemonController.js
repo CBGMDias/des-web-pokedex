@@ -7,7 +7,7 @@ const getIndex = (req, res) => {
 const getAllPokemons = (req, res) => {
     const pokemons = pokemonModel.getPokemons()
     res.render('pokedex', { pokemons })
-};
+}
 
 const getPokemon = (req, res) => {
     const pokemon = pokemonModel.getPokemonById(req.params.id)
@@ -16,16 +16,16 @@ const getPokemon = (req, res) => {
     } else {
         res.status(404).send('Pokémon não encontrado')
     }
-};
+}
 
 const getAddPokemon = (req, res) => {
     res.render('add-pokemon')
 }
 
 const addPokemon = (req, res) => {
-    const { nome, tipo } = req.body
-    pokemonModel.createPokemon(nome, tipo)
+    const { nome, tipo, peso, altura, nivelPoder } = req.body
+    pokemonModel.createPokemon(nome, tipo, peso, altura, nivelPoder)
     res.redirect('/pokedex')
-};
+}
 
 module.exports={ getIndex, getAllPokemons, getPokemon, getAddPokemon, addPokemon }
